@@ -1,0 +1,504 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght,GRAD@300..700,-30..0&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+  width: 100vw;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  min-width: 100vw;
+}
+
+/* Button Styles */
+.book-demo {
+  background-color: #F6E3FF;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  height: 65px;
+  width: 240px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-demo:hover {
+  background-color: #e3c6ff;
+  transform: translateY(-2px);
+}
+
+.book-demo:active {
+  background-color: #d1b2ff;
+  transform: translateY(1px);
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-content h1 {
+  color: #373737;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 90px;
+  margin: 0;
+}
+
+.hero-content p {
+  font-family: "Signika", sans-serif;
+  font-weight: 300;
+  color: #373737;
+  font-size: large;
+  text-align: left;
+  margin: 0 0 10vh;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 1000px) {
+  .hero {
+    flex-direction: column; /* Switch to column layout for screens smaller than 1300px */
+  }
+  .hero-content {
+    margin: 5vh 0;
+  }
+  .hero-content h1 {
+    font-size: 6rem;
+  }
+  .hero-image img {
+    width: 90%;
+  }
+  .contact-details {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Services Section */
+.services {
+  margin: 0;
+  min-height: 50vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-heading h1 {
+  padding-top: 20px;
+  font-size: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.services-content {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Testimonial Section */
+.testimonials {
+  text-align: center;
+  min-height: 50vh;
+  padding: 2rem;
+}
+
+.testimonial-heading {
+  font-size: 24px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #F6E3FF;
+  border-radius: 15px;
+  padding: 20px;
+  width: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    margin-bottom: 5vh;
+    width: 70%;
+  }
+}
+
+.testimonial-image {
+  max-width: 40%;
+  height: fit-content;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+  color: #00796b;
+}
+
+.testimonial-card p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Services List */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.services-list li {
+  margin: 25px 0;
+  font-size: 25px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: bolder;
+}
+
+/* Services Image */
+.services-image img {
+  width: 100%;
+  height: 450px;
+}
+
+@media (max-width: 1000px) {
+  .services-image {
+    display: none;
+  }
+  .contact-form {
+    padding-left: 15vw;
+  }
+}
+
+/* Contact Details */
+.contact-details {
+  text-align: left;
+  margin-top: 1%;
+}
+
+.contact-details h2 {
+  font-size: 3.5rem;
+  font-family: "Signika", sans-serif;
+  font-weight: 700;
+  color: #373737;
+  margin-bottom: 0.5rem;
+}
+
+.contact-details p {
+  font-family: "Signika", sans-serif;
+  font-weight: 400;
+  color: #373737;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.contact-details a {
+  color: #bc44c2;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+  color: #004d40;
+}
+
+.contact-details a i {
+  margin-right: 8px;
+}
+
+.contact-details .form-info {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #7f3181;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group textarea {
+  padding-left: 50px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9e9ff;
+}
+
+.form-group label {
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: 48%;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fddc5c;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 10%;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form button:hover {
+  background-color: #fcbf49;
+}
+
+/* Contact Content */
+.contact-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-details {
+  align-items: center;
+}
+
+.contact-details h2 {
+  font-size: 4rem;
+  font-family: "Signika", sans-serif;
+}
+
+.contact-details p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+}
+
+/* Contact Forms */
+.contact-forms {
+  margin-top: 5%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1000px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form button {
+    align-self: center;
+    margin-right: 10%;
+    padding-bottom: 10px;
+    margin-bottom: 7%;
+  }
+
+  .services-list {
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .logo-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    width: 100vw;
+  }
+
+  .social-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    width: 100vw;
+    gap: 8%;
+  }
+}
+
+/* Footer Section */
+.footer {
+  border-top: 1px solid #ddd;
+  width: 100%;
+  min-height: 35vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f9e9ff;
+  border-radius: 100px 100px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+@media (max-width: 1200px) {
+  .logo-text h1 {
+    font-size: 2rem;
+  }
+  
+  .logo-text p {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo-text h1 {
+    font-size: 2rem;
+  }
+  
+  .logo-text p {
+    font-size: 0.5rem;
+  }
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  width: 35%;
+}
+
+.logo-image {
+  width: 30%;
+  height: auto;
+}
+
+.logo-text h1 {
+  color: #373737;
+  font-size: 4rem;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Signika", sans-serif;
+}
+
+.social-section {
+  min-width: 20%;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-around;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.social-section > * {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-section > *:hover {
+  transform: scale(1.1);
+  color: #bc44c2;
+}
+
+
+
+.powered-by-section {
+  text-align: center;
+}
+
+.powered-by-section p {
+  font-size: xx-large;
+  font-family: "Poppins", sans-serif;
+}
