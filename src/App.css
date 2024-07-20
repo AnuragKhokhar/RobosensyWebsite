@@ -61,6 +61,8 @@ body, html {
   display: flex;
   align-items: center;
   padding: 20px;
+  justify-content: space-around;
+  
 }
 
 .hero-content {
@@ -84,7 +86,7 @@ body, html {
   margin: 0 0 10vh;
 }
 .hero-content .hero-description{
-  width: 50vw;
+  width: 40vw;
   color: #9690a0;
 }
 .hero-image img {
@@ -96,7 +98,8 @@ body, html {
 /* Responsive Hero Section */
 @media (max-width: 1000px) {
   .hero {
-    flex-direction: column; /* Switch to column layout for screens smaller than 1300px */
+    flex-direction: column; 
+    gap: 10vh;
   }
   
   .hero-content h1 {
