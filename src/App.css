@@ -107,6 +107,7 @@ body, html {
   }
   .hero-image img {
     width: 90%;
+    height: 50vh;
   }
   .contact-details {
     margin-top: 0;
@@ -190,7 +191,7 @@ body, html {
 
 .testimonial-image {
   max-width: 40%;
-  height: fit-content;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
 }
