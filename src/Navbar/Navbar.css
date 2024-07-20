@@ -1,9 +1,9 @@
 .navbar {
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: start;
-    background-color: transparent;
+    background-color: #F6E3FF;
     z-index: 100;
     position: sticky;
     top: 0;
