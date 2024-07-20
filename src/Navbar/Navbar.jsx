@@ -81,7 +81,7 @@ function Navbar() {
             <nav className={sidebar ? 'sidebar-menu active' : 'sidebar-menu'}>
               <ul className='sidebar-menu-items' onClick={showSidebar}>
                 <li className='sidebar-toggle'>
-                  <Link to='#' className='sidebar-icons'>
+                  <Link to='#' className='sidebar-icns'>
                     <IoMdClose style={{ color: "black" }} />
                   </Link>
                 </li>

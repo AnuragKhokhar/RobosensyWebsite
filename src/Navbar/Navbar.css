@@ -25,6 +25,12 @@
     margin-left: 2rem;
 }
 
+.sidebar-icns {
+    font-size: 2rem;
+    color: black;
+    margin-left: 0.5rem;
+}
+
 .sidebar-menu {
     top: 0;
     left: -100%;
@@ -42,6 +48,7 @@
 .sidebar-menu.active {
     left: 0;
     transition: 450ms;
+
 }
 
 .list-items {
@@ -50,7 +57,7 @@
     list-style: none;
     align-items: center;
     justify-content: start;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 0px 8px 0px;
 }
 
 .list-items a {
