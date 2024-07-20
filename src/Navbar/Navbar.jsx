@@ -1,13 +1,10 @@
 import './Navbar.css';
-import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { IoListSharp } from "react-icons/io5";
-// import { TfiPencilAlt } from "react-icons/tfi";
-// import { MdOutlineDashboard } from "react-icons/md";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -16,13 +13,19 @@ function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const isWideScreen = windowWidth > 1000;
-  const navigate = useNavigate();
-
 
   const handleClickOutside = (event) => {
     //checks if click is not on sidebar
     if (sidebar && !isWideScreen && !document.querySelector('.sidebar-menu').contains(event.target) && !document.querySelector('.sidebar-icons').contains(event.target)) {
       setSidebar(false);
+    }
+  };
+
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setSidebar(false); // Close sidebar after navigation
     }
   };
 
@@ -51,20 +54,19 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   return (
     <>
       {isWideScreen ? (
         <>
           <nav className="navbar-wideScreen">
-            <div className="logo" onClick={()=>navigate(`/dashboard`)} style={{ marginLeft: "30px" }}> RoboSensy</div>
+            <div className="logo" onClick={() => handleScrollToSection('home')} style={{ marginLeft: "30px" }}>RoboSensy</div>
             <ul className="nav-links" style={{ marginRight: "50px" }}>
-              <li><Link to="/project">Home</Link></li>
-              <li><Link to="/project">Services</Link></li>
-              <li><Link to="/project">Demo</Link></li>
-              <li><Link to="/project">Blog</Link></li>
-              <li><Link to="/project">Contact</Link></li>
-              <li onClick={handleLogout}><Link >SignIn/LogIn</Link></li>
+              <li><a onClick={() => handleScrollToSection('home')}>Home</a></li>
+              <li><a onClick={() => handleScrollToSection('services')}>Services</a></li>
+              <li><a onClick={() => handleScrollToSection('testimonials')}>Demo</a></li>
+              <li><a onClick={() => handleScrollToSection('blog')}>Blog</a></li>
+              <li><a onClick={() => handleScrollToSection('contact')}>Contact</a></li>
+              <li onClick={handleLogout}><a>SignIn/LogIn</a></li>
             </ul>
           </nav>
         </>
@@ -83,31 +85,31 @@ function Navbar() {
                     <IoMdClose style={{ color: "black" }} />
                   </Link>
                 </li>
-                <li className="list-items">
+                <li className="list-items" onClick={() => handleScrollToSection('home')}>
                   <Link to='#'>
                     <IoListSharp style={{ color: "black" }} />
                     <span style={{ color: "black" }}>Home</span>
                   </Link>
                 </li>
-                <li className="list-items">
+                <li className="list-items" onClick={() => handleScrollToSection('services')}>
                   <Link to='#'>
                     <IoListSharp style={{ color: "black" }} />
                     <span style={{ color: "black" }}>Services</span>
                   </Link>
                 </li>
-                <li className="list-items">
+                <li className="list-items" onClick={() => handleScrollToSection('testimonials')}>
                   <Link to='#'>
                     <IoListSharp style={{ color: "black" }} />
                     <span style={{ color: "black" }}>Demo</span>
                   </Link>
                 </li>
-                <li className="list-items">
+                <li className="list-items" onClick={() => handleScrollToSection('blog')}>
                   <Link to='#'>
                     <IoListSharp style={{ color: "black" }} />
                     <span style={{ color: "black" }}>Blog</span>
                   </Link>
                 </li>
-                <li className="list-items">
+                <li className="list-items" onClick={() => handleScrollToSection('contact')}>
                   <Link to='#'>
                     <IoListSharp style={{ color: "black" }} />
                     <span style={{ color: "black" }}>Contact</span>
@@ -122,7 +124,6 @@ function Navbar() {
               </ul>
             </nav>
           </div>
-
         </>
       )}
     </>
@@ -130,4 +131,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

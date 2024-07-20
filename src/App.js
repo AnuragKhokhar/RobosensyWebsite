@@ -102,13 +102,16 @@ const App = () => {
           </div>
           <div className="services-content">
             <ul className="services-list">
-              <li><span role="img" aria-label="appointment">📅</span> Appointment Scheduling & Management</li>
-              <li><span role="img" aria-label="medicine">💊</span> Medicine Management</li>
-              <li><span role="img" aria-label="patient">👨‍⚕️</span> Patient Management</li>
-              <li><span role="img" aria-label="prescription">📝</span> Prescription Generator</li>
-              <li><span role="img" aria-label="invoice">💵</span> Invoice Generator</li>
-              <li><span role="img" aria-label="analytics">📊</span> Analytic Dashboard</li>
-              <li><span role="img" aria-label="hrms">📋</span> HRMS Portal</li>
+              <li>
+                <span role="img" aria-label="appointment">📅</span> 
+                <span>Appointment Scheduling & Management </span>
+              </li>
+              <li><span role="img" aria-label="medicine">💊</span> <span> Medicine Management</span></li>
+              <li><span role="img" aria-label="patient">👨‍⚕️</span> <span> Patient Management</span></li>
+              <li><span role="img" aria-label="prescription">📝</span> <span>Prescription Generator</span></li>
+              <li><span role="img" aria-label="invoice">💵</span><span> Invoice Generator</span></li>
+              <li><span role="img" aria-label="analytics">📊</span><span> Analytic Dashboard</span></li>
+              <li><span role="img" aria-label="hrms">📋</span> <span>HRMS Portal</span></li>
             </ul>
             <div className="services-image">
               <img src={laptopImage} alt="RoboSensy Dashboard" />
@@ -119,33 +122,32 @@ const App = () => {
         <section id="contact" className="contact">
           <div className="contact-content">
             <div className="contact-details">
-              <h2>Contact</h2>
+              <h2>Contact Us</h2>
               <p>
-                For any questions or concerns call <br />
+                Have questions or need assistance? Feel free to reach out to us at <br />
                 <a href="tel:8619131789">
                   <FaPhoneAlt style={{ marginRight: '8px' }} />
-                  8619131789
-                </a> <br />
-                <span className='form-info'>Or fill out our form</span> 
+                  861-913-1789
+                </a> 
               </p>
+              <p className='alternate'>Alternatively, you can fill out our contact form</p>
             </div>
+
             <div className="contact-forms">
               <form className="contact-form">
                 <div className="form-group">
-                  <label htmlFor="name" style={{ width: "20%" }}>Name</label>
-                  <input type="text" id="name" name="name" />
+                  <input type="text" id="name" name="name" placeholder='Enter Your Name' />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="email" style={{ width: "20%" }}>Email</label>
-                  <input type="email" id="email" name="email" />
+                  
+                  <input type="email" id="email" name="email" placeholder='Enter Your Email Id' />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phone" style={{ width: "20%" }} className="phone-label">Phone <br /> Number</label>
-                  <input type="tel" id="phone" name="phone" />
+                  
+                  <input type="tel" id="phone" name="phone" placeholder='Enter Phone Number' />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="message" style={{ width: "20%" }}>Message</label>
-                  <textarea id="message" name="message"></textarea>
+                  <textarea id="message" name="message" placeholder='Write Your Message...'></textarea>
                 </div>
                 <button type="submit">SUBMIT NOW</button>
               </form>

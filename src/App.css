@@ -127,13 +127,12 @@ body, html {
 
 .services-heading h1 {
   padding-top: 20px;
-  font-size: 40px;
+  font-size: 50px;
   font-family: "Nunito Sans", sans-serif;
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 .services-content {
-  padding-top: 30px;
   display: flex;
   justify-content: space-around;
 }
@@ -214,6 +213,7 @@ body, html {
   font-size: 25px;
   font-family: "Public Sans", sans-serif;
   font-weight: bolder;
+  
 }
 
 /* Services Image */
@@ -226,8 +226,11 @@ body, html {
   .services-image {
     display: none;
   }
-  .contact-form {
-    padding-left: 15vw;
+
+  .services-list li{
+    display: flex;
+    text-align: left;
+    font-size: larger;
   }
 }
 
@@ -285,23 +288,9 @@ body, html {
   flex-direction: column;
   gap: 15px;
   align-items: center;
+  justify-content: center;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: row;
-  width: 400px;
-}
-
-.form-group label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-family: "Poppins", sans-serif;
-}
-
-.form-group textarea {
-  padding-left: 50px;
-}
 
 .form-group input,
 .form-group textarea {
@@ -309,17 +298,27 @@ body, html {
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #f9e9ff;
+  width: 25vw;
 }
 
-.form-group label {
-  padding-right: 30px;
-  padding-left: 10px;
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  border-color: #534c54; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(94, 17, 104, 0.5); /* Blue shadow on focus */
+  outline: none; /* Remove default outline */
 }
 
-.form-group input[type="email"],
-.form-group input[type="tel"] {
-  width: 48%;
+.contact-form .form-group input::placeholder,
+textarea::placeholder {
+  color: #8c8194; /* Placeholder text color */
+  font-size: 0.9rem; /* Placeholder font size */
+  opacity: 1; /* Ensure opacity is 1 for better visibility */
 }
+
+.form-group textarea{
+  height: 15vh;
+}
+
 
 .contact-form button {
   padding: 12px;
@@ -357,6 +356,9 @@ body, html {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 500;
 }
+.contact-details .alternate{
+  font-weight: bold;
+}
 
 /* Contact Forms */
 .contact-forms {
@@ -369,6 +371,16 @@ body, html {
     flex-direction: column;
     align-items: center;
   }
+  .contact-details{
+    padding: 20px;
+  }
+
+  .contact-form .form-group input{
+    width: 60vw;
+  }
+  .contact-form textarea{
+    width: 60vw;
+  }
 
   .contact-form button {
     align-self: center;
@@ -376,6 +388,7 @@ body, html {
     padding-bottom: 10px;
     margin-bottom: 7%;
   }
+  
 
   .services-list {
     text-align: center;
@@ -501,4 +514,19 @@ body, html {
 .powered-by-section p {
   font-size: xx-large;
   font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 700px) {
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-section .logo-image {
+    width: 100px; /* Adjust the size as needed */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  .logo-section .logo-text h1 {
+    font-size: 50px;
+  }
 }
