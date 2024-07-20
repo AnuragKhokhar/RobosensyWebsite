@@ -89,7 +89,8 @@ const App = () => {
         <section id="home" className="hero">
           <div className="hero-content">
             <h1>RoboSensy</h1>
-            <p>The Future of Healthcare</p>
+            <h3>The Future of Healthcare </h3>
+            <h4 className='hero-description'>Discover how RoboSensy can streamline your clinic's operations and enhance patient care with our state-of-the-art management solutions. </h4>
             <button className="book-demo">BOOK DEMO</button>
           </div>
           <div className="hero-image">
